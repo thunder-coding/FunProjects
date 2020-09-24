@@ -38,7 +38,7 @@ def drawBoard():
  
 #Check if the game has been won or Tied 
 def checkGameResult():
-    if board[0]==board[1]==board[2] or board[3]==board[4]==board[5] or board[6]==board[7]==board[8] or board[0]==board[3]==board[6] or board[7]==board[4]==board[1] or board[2]==board[5]==board[8] or board[0]==board[4]==board[8] or board[2]==board[4]==board[6]:
+    if board[0]==board[1]==board[2]!=0 or board[3]==board[4]==board[5]!=0 or board[6]==board[7]==board[8]!=0 or board[0]==board[3]==board[6]!=0 or board[7]==board[4]==board[1]!=0 or board[2]==board[5]==board[8]!=0 or board[0]==board[4]==board[8]!=0 or board[2]==board[4]==board[6]!=0:
         print("")           
         print("**************")
         print("Game won by " + str(player))
