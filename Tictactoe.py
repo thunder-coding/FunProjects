@@ -1,29 +1,35 @@
 ''' Tic Tac Toe for 2 players in Python '''
 import sys
-# Made by :Pratham Prasoon
-# Twitter @PrassonPratham
+# Made by :Pratham Prasoon, Yaksh Bariya
+# Twitter @PrassonPratham , @CodingThunder
    
-#Board 
-board = [ '0','1','2', '3', '4', '5', '6', '7', '8']
+#Board   A1 A2 A3 B1 B2 B3 C1 C2 C3
+board = [0, 0, 0, 0, 0, 0, 0, 0, 0]
+#Note :    0 -> Empty box
+X = 1    # 1 -> X
+O = 2    # 2 -> O
+
 
 #Current Player = X
-player = 'X'
+player = X
 
-#Displaying which player's turn is next
-pseudoPlayer = "X"
-
-#Places that have been filled
-slotsFilled = 0
+def boxValue(boxNumber):
+    if(board[boxNumber-1] == 1):
+        return "X"
+    elif(board[boxNumber-1] == 2):
+        return "O"
+    else:
+        return " "
 
 
 #Draw the Tic Tac Toe Board
 def drawBoard():
     print("-------------") 
-    print("| " +board[0] + " | " + board[1]+ ' | '+board[2] + ' |')
+    print("| " + boxValue(1) + " | " + boxValue(2) + ' | '+ boxValue(1) + ' |')
     print("|-----------|" )
-    print("| " +board[3] + " | " +  board[4]+ ' | '+board[5]+ ' |' )
+    print("| " + boxValue(4) + " | " + boxValue(5) + ' | '+ boxValue(1) + ' |' )
     print("|-----------|"  )
-    print("| " +board[6] + " | " +  board[7]+ ' | '+board[8] + ' |')
+    print("| " + boxValue(7) + " | " + boxValue(8) + ' | '+ boxValue(1) + ' |')
     print("-------------" ) 
     print(pseudoPlayer+"'s turn")
  
@@ -47,3 +53,4 @@ def checkGameWon():
 #Game sequence
 #Write code here👇     
         
+ 
