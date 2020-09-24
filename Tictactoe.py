@@ -79,6 +79,7 @@ while 1:
                 player = X
                 board[0]=board[1]=board[2]=board[3]=board[4]=board[5]=board[6]=board[7]=board[8]=0
                 drawBoard()
+                slotFilled = 0
                 break
             elif x == "n":
                 sys.exit("Player did not want to play again")
