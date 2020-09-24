@@ -31,7 +31,7 @@ def drawBoard():
     print("|-----------|"  )
     print("| " + boxValue(7) + " | " + boxValue(8) + ' | '+ boxValue(1) + ' |')
     print("-------------" ) 
-    print(pseudoPlayer+"'s turn")
+    print("It's your turn Player "+player+" :  ")
  
 #Check if the game has been won or Tied 
 def checkGameWon():
