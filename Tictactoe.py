@@ -1,7 +1,9 @@
 ''' Tic Tac Toe for 2 players in Python '''
 # Made by :Pratham Prasoon, Yaksh Bariya
 # Twitter @PrassonPratham , @CodingThunder
-   
+  
+import sys
+ 
 #Board   1. 2. 3. 4. 5. 6. 7. 8. 9.
 board = [0, 0, 0, 0, 0, 0, 0, 0, 0]
 #Note :    0 -> Empty box
@@ -42,12 +44,15 @@ def checkGameResult():
         print("Game won by " + player)
         print("🎉")
         print("**************")
+        return 1
     elif slotFilled==9:
         print("")           
         print("**************")
         print("Game Tied")
         print("     😑")
         print("**************")
+        return 1
+    return 0
              
 #Game sequence
 while 1:
@@ -64,8 +69,16 @@ while 1:
                 player = X
             slotFilled = slotFilled + 1
     else:
-        # Some code
-
-        
+        print("Looks like you have made a typing mistake")
+        print("Try Again!!")
+    if checkGameResult():
+        while 1:
+            x = print("Would you like to play again?? Y/N :  ")
+            if x == "y":
+                player = X
+            elif x == "n":
+                sys.exit("Player did not want to play again")
+            else:
+                print("Sorry, We didn't understand")
         
  
