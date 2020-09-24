@@ -53,10 +53,16 @@ def checkGameResult():
 while 1:
     _input = input("It's your turn Player "+player+" :  ")
     if _input.strip().isdigit() and int(_input.strip()) >= 1 and int(_input.strip()) <= 9:
-        if board[int(_input.strip())] != 0:
+        if board[int(_input.strip()) - 1] != 0:
             print("That place is already occupied, Sorry")
         else:
-            # 
+            board[int(_input.strip()) - 1] = player
+            drawBoard()
+            if player == X:
+                player = O
+            else:
+                player = X
+            slotFilled = slotFilled + 1
     else:
         # Some code
 
