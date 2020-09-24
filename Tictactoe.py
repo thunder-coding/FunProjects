@@ -55,6 +55,7 @@ def checkGameResult():
     return 0
              
 #Game sequence
+drawBoard()
 while 1:
     _input = input("It's your turn Player "+str(player)+" :  ")
     if _input.strip().isdigit() and int(_input.strip()) >= 1 and int(_input.strip()) <= 9:
