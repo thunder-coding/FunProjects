@@ -32,11 +32,10 @@ def drawBoard():
     print("| " + boxValue(4) + " | " + boxValue(5) + ' | '+ boxValue(1) + ' |' )
     print("|-----------|"  )
     print("| " + boxValue(7) + " | " + boxValue(8) + ' | '+ boxValue(1) + ' |')
-    print("-------------" ) 
-    print("It's your turn Player "+player+" :  ")
+    print("-------------" )
  
 #Check if the game has been won or Tied 
-def checkGameWon():
+def checkGameResult():
     if board[0]==board[1]==board[2] or board[3]==board[4]==board[5] or board[6]==board[7]==board[8] or board[0]==board[3]==board[6] or board[7]==board[4]==board[1] or board[2]==board[5]==board[8] or board[0]==board[4]==board[8] or board[2]==board[4]==board[6]:
         print("")           
         print("**************")
@@ -51,6 +50,16 @@ def checkGameWon():
         print("**************")
              
 #Game sequence
-#Write code here👇     
+while 1:
+    _input = input("It's your turn Player "+player+" :  ")
+    if _input.strip().isdigit() and int(_input.strip()) >= 1 and int(_input.strip()) <= 9:
+        if board[int(_input.strip())] != 0:
+            print("That place is already occupied, Sorry")
+        else:
+            # 
+    else:
+        # Some code
+
+        
         
  
