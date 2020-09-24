@@ -29,11 +29,11 @@ def boxValue(boxNumber):
 #Draw the Tic Tac Toe Board
 def drawBoard():
     print("-------------") 
-    print("| " + boxValue(1) + " | " + boxValue(2) + ' | '+ boxValue(1) + ' |')
+    print("| " + boxValue(1) + " | " + boxValue(2) + ' | '+ boxValue(3) + ' |')
     print("|-----------|" )
-    print("| " + boxValue(4) + " | " + boxValue(5) + ' | '+ boxValue(1) + ' |' )
+    print("| " + boxValue(4) + " | " + boxValue(5) + ' | '+ boxValue(6) + ' |' )
     print("|-----------|"  )
-    print("| " + boxValue(7) + " | " + boxValue(8) + ' | '+ boxValue(1) + ' |')
+    print("| " + boxValue(7) + " | " + boxValue(8) + ' | '+ boxValue(9) + ' |')
     print("-------------" )
  
 #Check if the game has been won or Tied 
