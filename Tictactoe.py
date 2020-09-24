@@ -77,6 +77,7 @@ while 1:
             x = input("Would you like to play again?? Y/N :  ")
             if x == "y":
                 player = X
+                break
             elif x == "n":
                 sys.exit("Player did not want to play again")
             else:
