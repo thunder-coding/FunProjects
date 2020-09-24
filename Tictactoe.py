@@ -1,9 +1,8 @@
 ''' Tic Tac Toe for 2 players in Python '''
-import sys
 # Made by :Pratham Prasoon, Yaksh Bariya
 # Twitter @PrassonPratham , @CodingThunder
    
-#Board   A1 A2 A3 B1 B2 B3 C1 C2 C3
+#Board   1. 2. 3. 4. 5. 6. 7. 8. 9.
 board = [0, 0, 0, 0, 0, 0, 0, 0, 0]
 #Note :    0 -> Empty box
 X = 1    # 1 -> X
@@ -12,6 +11,9 @@ O = 2    # 2 -> O
 
 #Current Player = X
 player = X
+
+#Number of boxes that are filled
+slotFilled = 0
 
 def boxValue(boxNumber):
     if(board[boxNumber-1] == 1):
@@ -41,14 +43,12 @@ def checkGameWon():
         print("Game won by " + player)
         print("🎉")
         print("**************")
-        sys.exit()
-    elif slotsFilled == 9:
+    elif slotFilled==9:
         print("")           
         print("**************")
         print("Game Tied")
-        print("    -_-")
+        print("     😑")
         print("**************")
-        sys.exit()
              
 #Game sequence
 #Write code here👇     
