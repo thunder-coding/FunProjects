@@ -67,6 +67,7 @@ while 1:
     else:
         print("Looks like you have made a typing mistake")
         print("Try Again!!")
+        slotFilled = slotFilled -1
     if checkGameResult():
         while 1:
             x = input("Would you like to play again?? Y/N :  ")
