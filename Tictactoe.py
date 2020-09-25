@@ -61,10 +61,10 @@ while 1:
     if _input.strip().isdigit() and int(_input.strip()) >= 1 and int(_input.strip()) <= 9:
         if board[int(_input.strip()) - 1] != 0:
             print("That place is already occupied, Sorry")
+            slotFilled = slotFilled -1
         else:
             board[int(_input.strip()) - 1] = player
             drawBoard()
-            slotFilled = slotFilled -1
     else:
         print("Looks like you have made a typing mistake")
         print("Try Again!!")
