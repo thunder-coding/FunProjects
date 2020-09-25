@@ -64,6 +64,7 @@ while 1:
         else:
             board[int(_input.strip()) - 1] = player
             drawBoard()
+            slotFilled = slotFilled -1
     else:
         print("Looks like you have made a typing mistake")
         print("Try Again!!")
